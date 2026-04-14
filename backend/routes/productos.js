@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Producto = require('../models/Producto');
 
-// 🔍 Obtener todos los productos
+
 router.get('/', async (req, res) => {
     try {
         const productos = await Producto.find();
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// ➕ Crear producto
+
 router.post('/', async (req, res) => {
     try {
         const nuevo = new Producto(req.body);
@@ -23,8 +23,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-module.exports = router;
-// ✏️ Editar producto
+
 router.put('/:id', async (req, res) => {
     try {
         const productoActualizado = await Producto.findByIdAndUpdate(
@@ -38,7 +37,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// ❌ Eliminar producto
+
 router.delete('/:id', async (req, res) => {
     try {
         await Producto.findByIdAndDelete(req.params.id);
@@ -47,3 +46,5 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+module.exports = router;

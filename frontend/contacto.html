@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto — Tienda de Mascotas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: lightblue; }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+            <a href="index.html" class="btn btn-outline-secondary btn-sm">← Inicio</a>
+            <span class="text-muted">Tienda de Mascotas</span>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <h1 class="h3 mb-4 text-center">Escríbenos</h1>
+                        <p class="text-muted small mb-4">Los campos marcados con <span class="text-danger">*</span> son obligatorios.</p>
+
+                        <form id="formContacto" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre completo <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required minlength="2" maxlength="120" autocomplete="name" placeholder="Tu nombre">
+                                <div class="invalid-feedback">Indica un nombre de al menos 2 caracteres.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" required autocomplete="email" placeholder="correo@ejemplo.com">
+                                <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="telefono" name="telefono" inputmode="tel" maxlength="20" placeholder="Opcional, ej. +57 300 1234567">
+                                <div class="invalid-feedback" id="telFeedback"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required minlength="10" maxlength="2000" placeholder="¿En qué podemos ayudarte?"></textarea>
+                                <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
+                            </div>
+
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="acepto" name="acepto" required>
+                                <label class="form-check-label" for="acepto">Acepto la política de privacidad y el tratamiento de datos <span class="text-danger">*</span></label>
+                                <div class="invalid-feedback">Debes aceptar para continuar.</div>
+                            </div>
+
+                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                                <a href="index.html" class="btn btn-outline-secondary order-sm-1">Cancelar</a>
+                                <button type="submit" class="btn btn-primary order-sm-2">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/contacto.js"></script>
+</body>
+</html>
