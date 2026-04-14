@@ -11,7 +11,7 @@ fetch('http://localhost:3000/api/productos')
         contenedor.innerHTML += `
         <div class="col-md-4">
             <div class="card mb-4 shadow">
-                <img src="${p.imagen}" class="card-img-top">
+                <img src="${p.imagen}" class="card-img-top"style="height:200px; object-fit:cover;">
                 <div class="card-body">
                     <h5 class="card-title">${p.nombre}</h5>
                     <p class="card-text">$${p.precio}</p>
