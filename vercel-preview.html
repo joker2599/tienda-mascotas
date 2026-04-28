@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preview Vercel — Tienda de Mascotas</title>
+    <style>
+      html, body { height: 100%; margin: 0; }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .bar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-bottom: 1px solid #d0d7de;
+        background: #f6f8fa;
+      }
+      .bar a { color: #0969da; text-decoration: none; }
+      .bar a:hover { text-decoration: underline; }
+      .hint { color: #57606a; font-size: 12px; }
+      iframe { width: 100%; height: calc(100% - 45px); border: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <strong>Preview Vercel</strong>
+      <a href="https://tienda-mascotas-pi.vercel.app" target="_blank" rel="noreferrer">Abrir en navegador</a>
+      <span class="hint">Si ves “pantalla azul”, abre DevTools del navegador (F12) para ver el error real.</span>
+    </div>
+    <iframe
+      src="https://tienda-mascotas-pi.vercel.app"
+      title="Tienda de Mascotas (Vercel)"
+      referrerpolicy="no-referrer"
+      allow="clipboard-read; clipboard-write"
+    ></iframe>
+  </body>
+</html>
+

@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/contacto.html", "destination": "/contacto.html" },
+    { "source": "/carrito.html", "destination": "/frontend/carrito.html" },
+    { "source": "/favoritos.html", "destination": "/frontend/favoritos.html" },
+    { "source": "/js/(.*)", "destination": "/frontend/js/$1" },
+    { "source": "/img/(.*)", "destination": "/frontend/img/$1" }
+  ]
+}
+

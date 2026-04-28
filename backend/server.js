@@ -13,16 +13,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
 console.log('MONGO_URI:', process.env.MONGO_URI);
 
-
-mongoose.connect(process.env.MONGO_URI, {
-  serverSelectionTimeoutMS: 10000,
-  family: 4
-})
-.then(() => console.log(' MongoDB conectado'))
-.catch(err => console.error(' Error:', err.message));
+if (process.env.MONGO_URI) {
+  mongoose.connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 10000,
+    family: 4
+  })
+  .then(() => console.log(' MongoDB conectado'))
+  .catch(err => console.error(' Error:', err.message));
+} else {
+  console.warn(' ⚠️  MONGO_URI no definido. Usando modo demo (sin BD).');
+}
 
 
 app.get('/', (req, res) => {
