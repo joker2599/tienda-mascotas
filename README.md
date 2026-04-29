@@ -2,7 +2,8 @@
 
 Aplicación web simple para mostrar un catálogo de productos para mascotas, con carrito y favoritos usando `localStorage`, una página de contacto con validaciones y un backend (o API serverless en Vercel) que entrega productos.
 
-### URL definitiva (Vercel)
+### URL (Vercel)
+### URL GIT (https://github.com/joker2599/tienda-mascotas.git)
 
 - **Sitio (alias estable)**: `https://tienda-mascotas-pi.vercel.app`
 
@@ -90,7 +91,7 @@ Abrir:
 
 ## Despliegue en Vercel
 
-1. Importa el repositorio en Vercel.
+1.  se importa el repositorio en Vercel.
 2. (Opcional) Configura variable de entorno **`MONGO_URI`** si quieres usar base de datos real.
 3. Deploy.
 
